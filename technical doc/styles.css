@@ -1,0 +1,103 @@
+body *{
+    font-family: 'Merriweather', serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+hr{
+    background-color: ghostwhite;
+    margin-bottom: 5px;
+}
+
+code{
+    font-family: monospace;
+    background-color: rgba(230, 230, 230, 0.74);
+    align-self: stretch;
+}
+.sidebar{
+    background: #11101D;
+    overflow-x:hidden;
+    overflow-y: auto;
+    margin: 0;
+    padding: 6px 14px;
+    text-align: left;
+    z-index: 99;
+    transition: all 0.5s ease;
+
+}
+.sidebar .logo-details{
+    /* display: flex; */
+    margin-top: 7%;
+    margin-bottom: 7%;
+}
+
+.sidebar .logo-details .logo{
+    display: block;
+    float: left;
+    margin-right: 3%;
+}
+
+.sidebar .logo-details .logo-name{
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #fff;
+    line-height: 1.5;
+}
+
+.sidebar .nav{
+    border-radius: 1%;
+}
+
+.sidebar .nav-list li{
+    border-radius: 12px;
+    list-style: none;
+}
+
+.sidebar .nav-list a{
+    text-decoration: none;
+}
+
+.sidebar .nav-list a .link_name{
+    font-size: 1rem;
+    font-weight: 400;
+    color: #fff;
+}
+.sidebar .container{
+    border-radius: 12px;
+    text-align: left;
+    padding: 7%;
+    cursor: pointer;
+}
+.sidebar .container:hover{
+    transition: 0.5s ease;
+    background: #fff;
+}
+.sidebar .container:hover .link_name{
+    font-weight: 600;
+    color: #11101D
+}
+
+#main{
+    background: ghostwhite;
+}
+.heading h3{
+    display: flex;
+    font-weight: 900;
+    font-size: 1.3rem;
+}
+h4{
+    display: flex;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+.list-item{
+    list-style: none;
+}
+
+.main-section{
+    text-align: justify;
+}
+
+.main-section .description{
+    padding: 1% 3% 1% 2%;
+}

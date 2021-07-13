@@ -1,0 +1,208 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap" rel="stylesheet">
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <title>FCC: Technical Documentation</title>
+</head>
+
+<body>
+    <div class="row">
+            <div class="sidebar col col-lg-2 col-md-4">
+                <div class="logo-details">
+                    <div class="logo">
+                        <img src="https://img.icons8.com/color/48/000000/python--v2.png" />
+                    </div>
+                    <span class="logo-name">NumPy Basics</span>
+                </div>
+                <hr>
+                <nav class="nav" id = "navbar">
+                    <header id = "hide">Python Libaries</header>
+                    <ul class="nav-list">
+                        <div class="container">
+                            <li>
+                                <a href="#NumPy">
+                                    <span class="link_name">NumPy</span>
+                                </a>
+                            </li>
+                        </div>
+                        <div class="container">
+                            <li>
+                                <a href="#NumPy_Array">
+                                    <span class="link_name">NumPy Array</span>
+                                </a>
+                            </li>
+                        </div>
+                        <div class="container">
+                            <li>
+                                <a href="#Shape_and_size_of_an_array">
+                                    <span class="link_name">Shape and size of an array</span>
+                                </a>
+                            </li>
+                        </div>
+                        <div class="container">
+                            <li>
+                                <a href="#Indexing_and_slicing">
+                                    <span class="link_name">Indexing and slicing</span>
+                                </a>
+                            </li>
+                        </div>
+                        <div class="container">
+                            <li>
+                                <a href="#Basic_array_operations">
+                                    <span class="link_name">Basic array operations</span>
+                                </a>
+                            </li>
+                        </div>
+                        <div class="container">
+                            <li>
+                                <a href="#Generating_random_numbers">
+                                    <span class="link_name">Generating random numbers</span>
+                                </a>
+                            </li>
+                        </div>
+                        <div class="container">
+                            <li>
+                                <a href="#More_useful_array_operations">
+                                    <span class="link_name">More useful array operations</span>
+                                </a>
+                            </li>
+                        </div>
+                        <div class="container">
+                            <li>
+                                <a href="#References">
+                                    <span class="link_name">References</span>
+                                </a>
+                            </li>
+                        </div>
+                    </ul>
+                </nav>
+            </div>
+            <div class="col col-lg-10 col-md-8" id = "main">
+                <main id="main-doc">
+                <section class="main-section" id = "NumPy">
+                    <header class="heading">
+                        <h3>NumPy</h3>
+                        </header>
+                        <p class="description">
+                            NumPy is the fundamental package for scientific computing in Python. It is a Python library that provides a multidimensional array object, various derived objects (such as masked arrays and matrices), and an assortment of routines for fast operations on arrays, including mathematical, logical, shape manipulation, sorting, selecting, I/O, discrete Fourier transforms, basic linear algebra, basic statistical operations, random simulation and much more.
+                        </p>
+                </section>
+                <section class="main-section" id = "NumPy_Array">
+                    <header class="heading">
+                        <h3 class="head">NumPy Array</h3>
+                        </header>
+                        <li class ="list-item"><p class="description">An array is a central data structure of the NumPy library. An array is a grid of values and it contains information about the raw data, how to locate an element, and how to interpret an element. It has a grid of elements that can be indexed in various ways. The elements are all of the same type, referred to as the array dtype.</p></li>
+                        <br>
+                        <h4>Initializing a NumPy array</h4>
+                        <li class="list-item"><p class="description">One way we can initialize NumPy arrays is from Python lists, using nested lists for two- or higher-dimensional data.</p></li>
+                        <li class="list-item"><p class = "description"><code>>>> a = np.array([1, 2, 3, 4, 5, 6])</code></p></li>
+                        <li class="list-item"><p class="description">We can access the elements in the array using square brackets. When you’re accessing elements, remember that indexing in NumPy starts at 0. That means that if you want to access the first element in your array, you’ll be accessing element “0”.</p></li>
+                </section>
+                <section class="main-section" id = "Shape_and_size_of_an_array">
+                    <header class="heading">
+                        <h3 class = "head">Shape and size of an array</h3>
+                        </header>
+                        <li class="list-item"><p class="description">
+                            In NumPy, dimensions are called axes. This means that if you have a 2D array that looks like this: <br>
+                            <code>[[0., 0., 0.],
+                                [1., 1., 1.]]
+                            </code>
+                            Your array has 2 axes. The first axis has a length of 2 and the second axis has a length of 3. <br>
+                            <code>ndarray.ndim</code>: returns the no. of axes or dimensions of the array. <br>
+                            <code>ndarray.size</code>: returns the no. of elements in the array. <br>
+                            <code>ndarray.shape</code>: returns a tuple of integers that indicate the number of elements stored along each dimension of the array. <br>
+                        </p></li>
+                </section>
+                <section class="main-section" id = "Indexing_and_slicing">
+                    <header class="heading">
+                        <h3>Indexing and slicing</h3>
+                        </header>
+                        <li class="list-item"><p class="description">
+                            We can access the elements in the array using square brackets. When you’re accessing elements, remember that indexing in NumPy starts at 0. That means that if you want to access the first element in your array, you’ll be accessing element “0”.
+                            <br>
+                            You can index and slice NumPy arrays in the same ways you can slice Python lists. For example: <br>
+                            <code>>>> first_element = arr[0]</code><br>
+                            <code>>>> last_element = arr[-1]</code><br>
+                        </p></li>
+                </section>
+                <section class="main-section" id = "Basic_array_operations">
+                    <header class="heading">
+                        <h3>Basic array operations</h3>
+                    </header>
+                        <p class="description">
+                            You can add the arrays together with the plus sign. <br>
+                            <code>>>> data = np.array([1, 2]) <br>
+                                >>> ones = np.ones(2, dtype=int) <br>
+                                >>> data + ones <br>
+                                array([2, 3]) <br>
+                                </code>
+                        </p>
+                        <p class="description">
+                            Similarly you can do other operations as well: <br>
+                            <code>>>> data - ones <br>
+                            array([0, 1]) <br>
+                            >>> data * data <br>
+                            array([1, 4]) <br>
+                            >>> data / data <br>
+                            array([1., 1.]) <br>
+                            </code>
+                        </p>
+                </section>
+                <section class="main-section" id = "Generating_random_numbers">
+                    <header class="heading">
+                        <h3>Generating random numbers</h3></header>
+                        <p class="description">
+                            With Generator.integers, you can generate random integers from low (remember that this is inclusive with NumPy) to high (exclusive). You can set endpoint=True to make the high number inclusive.
+                        </p>
+                        <p class="description">You can generate a 2 x 4 array of random integers between 0 and 4 with:</p>
+                        <p class="description">
+                            <code>>>> rng.integers(5, size=(2, 4)) <br>
+                                        array([[2, 1, 1, 0], <br>
+                                               [0, 0, 0, 4]])  # may vary
+                                        </code>
+                        </p>
+                </section>
+                <section class="main-section" id = "More_useful_array_operations">
+                    <header class="heading">
+                        <h3>More useful array operations</h3> </header>
+                        <p class="description">NumPy also performs aggregation functions. In addition to <code>min</code>, <code>max</code>, and <code>sum</code>, you can easily run <code>mean</code> to get the average, <code>prod</code> to get the result of multiplying the elements together, <code>std</code> to get the standard deviation, and more.</p> <br>
+                        <p class="description">
+                            <code>>>> data = np.array([1,2]) <br>
+                                >>> data.max() <br>
+                                2.0 <br>
+                                >>> data.min() <br>
+                                1.0 <br>
+                                >>> data.sum() <br>
+                                3.0 <br>
+                                </code>
+                        </p>
+                </section>
+                <section class="main-section" id="References">
+                    <header class="heading">
+                        <h3>References</h3></header>
+                        <div class="list-group">
+                            <a href="https://numpy.org/doc/stable/" target = "_blank" class="list-group-item list-group-item-action">NumPy Documentation</a>
+                            <a href="https://icons8.com/icon/Rc0Xn5AtE8kX/python" class="list-group-item list-group-item-action">Icons by icons8</a>
+                        </div>
+                </section>
+                </main>
+            </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="index.js" charset="utf-8"></script>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js" charset="utf-8"></script>
+</body>
+
+</html>
